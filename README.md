@@ -4,3 +4,7 @@ correct form function and form enabled or disabled
 
 
 input disable or formularios disabled all 
+
+
+Colaborador:
+** Jeyson Julian
