@@ -9,8 +9,8 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 export class FormularioComponent implements OnInit{
 
   formulario: FormGroup = this.fb.group({
-    name: [{value: 'Pepe Perez', disabled: false}],
-    job: [{value: 'carpintero', disabled: false}]
+    name: ['Pepe Perez'],
+    job: ['carpintero']
   });
 
   constructor(private fb: FormBuilder,) {
@@ -20,12 +20,21 @@ export class FormularioComponent implements OnInit{
   }
 
   deshabilitarJob() {
-    this.formulario.controls['job'].disabled;
-    this.formulario.controls['job'].updateValueAndValidity();
+    this.formulario.controls['job'].disable();
+    //this.formulario.controls['job'].updateValueAndValidity();
   }
 
   habilitarJob() {
     this.formulario.controls['job'].enable();
+    //this.formulario.controls['job'].updateValueAndValidity();
+  }
+
+  deshabilitarFormularo() {
+    this.formulario.disable();
+  }
+
+  habilitarFormularo() {
+    this.formulario.enable();
   }
 
 }
