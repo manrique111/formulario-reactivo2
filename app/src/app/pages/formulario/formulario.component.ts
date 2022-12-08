@@ -21,6 +21,7 @@ export class FormularioComponent implements OnInit{
 
   deshabilitarJob() {
     this.formulario.controls['job'].disabled;
+    this.formulario.controls['job'].updateValueAndValidity();
   }
 
   habilitarJob() {
